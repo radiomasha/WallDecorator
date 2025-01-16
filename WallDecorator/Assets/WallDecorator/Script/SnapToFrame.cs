@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SnapToFrame : MonoBehaviour
 {
-    [SerializeField] private float _distance = 0.03f;
+    [SerializeField] private float _snappingDistance = 0.03f;
     private Vector3 hitPoint;
     private Vector3 hitNormal;
     private HandGrabInteractable _handGrabInteractable;
@@ -52,7 +52,7 @@ public class SnapToFrame : MonoBehaviour
                 hitNormal = hit.normal;
             }
            
-            if (hit.distance < _distance)
+            if (hit.distance < _snappingDistance)
             {
                     //UIDebugger.Log("it's close");
                 return true;
